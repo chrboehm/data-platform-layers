@@ -1,0 +1,9 @@
+Data Platform Layer Map
+
+An opinionated view driven by experience and community activity.
+
+The Data Platform Layer Map is intended as a mental model to illustrate key architectural layers with example tools from the open-source ecosystem. It’s not exhaustive. Technologies evolve, and choices vary by context. Please double-check for your use case and feel free to suggest additions.
+
+I welcome contributions! Please raise an issue to discuss suggestions and improvements. We'll work together and come to a conclusion.
+
+As a data enthusiast, my work typically centers around backend data systems and driving data projects. This UI was created with the help of GPT-4o and its friends.
