@@ -1,0 +1,312 @@
+- name: Consumption & Analytics
+  description: 📊 Decision-Making Enablement 🏢 Data-Driven Culture
+  children:
+    - name: Analytics
+      children:
+        - category: a
+          name: Apache Superset
+          link: https://superset.apache.org/
+          description: "modern data exploration and visualization platform"
+    - name: Data Apps
+      children:
+        - category: a
+          name: Streamlit
+          link: https://streamlit.io/
+          description: "fast way to build and share data apps"
+- name: Access & APIs
+  description: 🧑‍💼 Team Autonomy 📈 Innovation Enablement
+  children:
+    - name: API Gateway
+      children:
+        - category: a
+          name: Apache APISIX
+          link: https://apisix.apache.org/
+          description: "dynamic, real-time, and high-performance API gateway"
+        - category: a
+          name: Kong Gateway
+          link: https://github.com/Kong/kong
+          description: "API gateway built on top of NGINX"
+        - category: a
+          name: KrakenD
+          link: https://www.krakend.io/open-source/
+          description: "ultra-performant open-source API gateway with declarative configuration"
+    - name: API Frameworks
+      children:
+        - category: a
+          name: FastAPI
+          link: https://fastapi.tiangolo.com/
+          description: "modern, high-performance Python framework for building APIs with automatic OpenAPI docs"
+        - category: a
+          name: Spring Boot
+          link: https://spring.io/projects/spring-boot
+          description: "opinionated Java framework for rapid API and web application development"
+        - category: a
+          name: Express.js
+          link: https://expressjs.com/
+          description: "minimal and flexible Node.js web framework for building REST APIs"
+        - category: a
+          name: NestJS
+          link: https://nestjs.com/
+          description: "progressive Node.js framework for scalable server-side applications using TypeScript"
+
+- name: Machine Learning & Artificial Intelligence
+  description: 🧪 Bridge Data Science to Production 🧠 AI Product Readiness
+  children:
+    - name: ML Operations (MLOps)
+      children:
+        - category: a
+          name: MLflow
+          link: https://mlflow.org/
+          description: "platform for experiment tracking, model registry, and reproducibility"
+        - category: a
+          name: Metaflow
+          link: https://metaflow.org/
+          description: "human-centric MLOps framework for managing ML workflows"
+#        - category: a
+#          name: Feast
+#          link: https://feast.dev/
+#          description: "feature store for production ML"
+    - name: Model Serving
+      children:
+        - category: a
+          name: KServe
+          link: https://kserve.github.io/website/
+          description: "Kubernetes-based server for scalable and standards-compliant model serving"
+
+- name: Processing & Workflows
+  description: 🕒 Short Time-to-Insight ⚙️ Operational Efficiency
+  children:
+    - name: Stream Processing
+      children:
+        - category: a
+          name: Apache Kafka Streams
+          link: https://kafka.apache.org/documentation/streams/
+          description: "lightweight library for building streaming apps directly on Kafka"
+        - category: a
+          name: Apache Flink
+          link: https://flink.apache.org/
+          description: "stream-native distributed processing engine for stateful computations"
+    - name: Workflow and Pipeline Management
+      children:
+        - category: a
+          name: Apache Airflow
+          link: https://airflow.apache.org/
+          description: "platform to programmatically author, schedule, and monitor workflows"
+        - category: a
+          name: Argo Workflows
+          link: https://argoproj.github.io/argo-workflows/
+          description: "container-native workflow engine for orchestrating jobs on Kubernetes"
+        - category: a
+          name: Kafka Pipeline Operations (KPOps)
+          link: https://bakdata.github.io/kpops/
+          description: "Kafka Pipelines on Kubernetes"
+#        - category: a
+#          name: Dagster
+#          link: https://dagster.io/
+#          description: "data orchestrator for machine learning, analytics, and ETL"
+
+- name: Data Management
+  description: 🧱 Avoiding Data Silos 🚀 Short Time-to-Product
+  children:
+    - name: Stream Systems
+      children:
+        - category: a
+          name: Apache Kafka
+          link: https://kafka.apache.org/
+          description: "distributed event streaming platform for real-time data pipelines"
+        - category: a
+          name: Apache Pulsar
+          link: https://pulsar.apache.org/
+          description: "cloud-native distributed messaging and streaming"
+    - name: Structured & Semi-Structured Systems
+      children:
+        - category: a
+          name: PostgreSQL
+          link: https://www.postgresql.org/
+          description: "object-relational database system"
+        - category: a
+          name: Apache Druid
+          link: https://druid.apache.org/
+          description: "analytics database for OLAP workflows on nested data"
+        - category: a
+          name: ClickHouse
+          link: https://clickhouse.com/
+          description: "columnar database for analytical queries"
+        - category: a
+          name: DuckDB
+          link: https://duckdb.org/
+          description: "lightweight OLAP engine for local columnar analytics"
+    - name: Vector Storage
+      children:
+        - category: a
+          name: Qdrant
+          link: https://qdrant.tech/
+          description: "vector database for similarity search and AI applications"
+        - category: a
+          name: milvus
+          link: https://milvus.io/
+          description: "high-performance vector database built for scale"
+
+    - name: Blob Storage
+      children:
+        - category: a
+          name: MinIO
+          link: https://min.io/
+          description: "high-performance, S3-compatible object storage built for Kubernetes"
+        - category: a
+          name: SeaweedFS
+          link: https://github.com/seaweedfs/seaweedfs
+          description: "simple and fast distributed file system for blob-type data"
+#    - name: Table Formats
+#      children:
+#        - category: a
+#          name: Iceberg
+#          link: https://iceberg.apache.org/
+#          description: "open table format for large analytic datasets"
+#        - category: a
+#          name: Delta Lake
+#          link: https://delta.io/
+#          description: "framework for building format agnostic Lakehouse architectures"
+
+- name: Governance
+  description: 📚 Data Clarity ✅ Regulatory Compliance
+  children:
+    - name: Data Catalogue
+      children:
+        - category: a
+          name: OpenMetadata
+          link: https://open-metadata.org/
+          description: "centralized data catalog with lineage, profiling, and ownership tracking"
+    - name: Access & Ownership Policies
+      children:
+        - category: a
+          name: Open Policy Agent (OPA)
+          link: https://www.openpolicyagent.org/
+          description: "policy-as-code engine for fine-grained access control"
+    - name: Schema Management
+      children:
+        - category: a
+          name: Apicurio Registry
+          link: https://www.apicur.io/
+          description: "schema and artifact registry supporting Avro, JSON Schema, Protobuf"
+    - name: Metadata Management
+      children:
+        - category: a
+          name: Amundsen
+          link: https://www.amundsen.io/
+          description: "metadata and data discovery platform built for search and lineage"
+
+- name: Observability & Monitoring
+  description: 📊 SLAs & Transparency 🔍 Maintainability
+  children:
+    - name: Metrics
+      children:
+        - category: a
+          name: Prometheus
+          link: https://prometheus.io/
+          description: "monitoring system and time-series database"
+        - category: a
+          name: Grafana
+          link: https://grafana.com/
+          description: "dashboards and visualizing metrics"
+    - name: Tracing
+      children:
+        - category: a
+          name: Jaeger
+          link: https://www.jaegertracing.io/
+          description: "distributed tracing system for monitoring microservices"
+        - category: a
+          name: OpenTelemetry
+          link: https://opentelemetry.io/
+          description: "high-quality, ubiquitous, and portable telemetry to enable effective observability"
+    - name: Log Aggregation
+      children:
+        - category: a
+          name: Grafana Loki
+          link: https://www.grafana.com/oss/loki/
+          description: "horizontally scalable, multi-tenant log aggregation inspired by Prometheus"
+    - name: Data Lineage
+      children:
+        - category: a
+          name: OpenLineage
+          link: https://openlineage.io/
+          description: "standard for metadata and lineage collection"
+        - category: a
+          name: Marquez
+          link: https://marquezproject.ai/
+          description: "lineage metadata service built around OpenLineage"
+        - category: a
+          name: Streams Explorer
+          link: https://github.com/bakdata/streams-explorer
+          description: "real-time lineage and observability for Kafka-based streaming pipelines"
+
+- name: Security
+  description: 🧑‍⚖️Compliance & Trust 🔐 Risk Mitigation
+  children:
+    - name: IAM, RBAC
+      children:
+        - category: a
+          name: Keycloak
+          link: https://www.keycloak.org/
+          description: "identity and access management for modern applications"
+    - name: Network Policies
+      children:
+        - category: a
+          name: Calico
+          link: https://www.tigera.io/project-calico/
+          description: "network security and observability for containers, VMs, and native host-based workloads"
+    - name: Secrets Management
+      children:
+        - category: a
+          name: Infisical
+          link: https://infisical.com/
+          description: "platform for managing secrets across environments"
+
+- name: Compute / Storage / Network Abstraction
+  description: 🧑‍💻 Vendor Independence 🔄 Future-proofing
+  children:
+    - name: Service Mesh
+      children:
+        - category: a
+          name: Istio
+          link: https://istio.io/
+          description: "programmable, application-aware network for microservices"
+        - category: a
+          name: cilium
+          link: https://cilium.io
+          description: "cloud-native networking and security using eBPF"
+        - category: a
+          name: LINKERD
+          link: https://linkerd.io
+          description: "service mesh for Kubernetes with a focus on simplicity and performance"
+    - name: Scaling
+      children:
+        - category: a
+          name: Keda
+          link: https://keda.sh/
+          description: "event-driven autoscaling for Kubernetes"
+
+    - name: Serverless
+      children:
+        - category: a
+          name: Knative
+          link: https://knative.dev/
+          description: "Serverless framework for Kubernetes"
+    - name: Certificate Management
+      children:
+        - category: a
+          name: cert-manager
+          link: https://cert-manager.io/
+          description: "cloud native certificate management for Kubernetes"
+    - name: Container Runtime
+      children:
+      - category: a
+        name: Kubernetes
+        link: https://kubernetes.io/
+        description: "deployment, scaling, and management of containers"
+
+- name: Physical Infrastructure
+  description: 💰 Cost Control 🪵 Compliance
+  children:
+    - name: On-Prem Resources
+    - name: Cloud
