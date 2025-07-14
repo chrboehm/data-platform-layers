@@ -13,7 +13,7 @@
           name: Streamlit
           link: https://streamlit.io/
           description: "fast way to build and share data apps"
-- name: Access & APIs
+- name: Querying & APIs
   description: 🧑‍💼 Team Autonomy 📈 Innovation Enablement
   children:
     - name: API Gateway
@@ -48,12 +48,32 @@
           name: NestJS
           link: https://nestjs.com/
           description: "progressive Node.js framework for scalable server-side applications using TypeScript"
+    - name: Query Engines
+      children:
+        - category: a
+          name: Trino
+          link: https://trino.io/
+          description: "distributed SQL query engine for big data, formerly known as PrestoSQL"
+        - category: a
+          name: Apache Drill
+          link: https://drill.apache.org/
+          description: "schema-free SQL query engine for big data exploration"
+    - name: Table Formats
+      children:
+        - category: a
+          name: Apache Iceberg
+          link: https://iceberg.apache.org/
+          description: "open table format for large analytic datasets"
 
 - name: Machine Learning & Artificial Intelligence
   description: 🧪 Bridge Data Science to Production 🧠 AI Product Readiness
   children:
     - name: ML Operations (MLOps)
       children:
+        - category: a
+          name: Kubeflow
+          link: https://kubeflow.org/
+          description: "Kubernetes-native platform for end-to-end machine learning workflows"
         - category: a
           name: MLflow
           link: https://mlflow.org/
@@ -125,17 +145,25 @@
           link: https://www.postgresql.org/
           description: "object-relational database system"
         - category: a
-          name: Apache Druid
-          link: https://druid.apache.org/
-          description: "analytics database for OLAP workflows on nested data"
-        - category: a
           name: ClickHouse
           link: https://clickhouse.com/
           description: "columnar database for analytical queries"
         - category: a
+          name: StarRocks
+          link: https://www.starrocks.io/
+          description: "query engine for sub-second analytics both on and off the data lakehouse"
+        - category: a
           name: DuckDB
           link: https://duckdb.org/
           description: "lightweight OLAP engine for local columnar analytics"
+        - category: a
+          name: Apache Pinot
+          link: https://pinot.apache.org/
+          description: "real-time distributed OLAP datastore for low-latency analytics"
+        - category: a
+          name: Apache Druid
+          link: https://druid.apache.org/
+          description: "analytics database for OLAP workflows on nested data"
     - name: Vector Storage
       children:
         - category: a
@@ -171,12 +199,16 @@
 - name: Governance
   description: 📚 Data Clarity ✅ Regulatory Compliance
   children:
-    - name: Data Catalogue
+    - name: Metadata Management & Data Catalogues
       children:
         - category: a
           name: OpenMetadata
           link: https://open-metadata.org/
           description: "centralized data catalog with lineage, profiling, and ownership tracking"
+        - category: a
+          name: Amundsen
+          link: https://www.amundsen.io/
+          description: "metadata and data discovery platform built for search and lineage"
     - name: Access & Ownership Policies
       children:
         - category: a
@@ -189,12 +221,6 @@
           name: Apicurio Registry
           link: https://www.apicur.io/
           description: "schema and artifact registry supporting Avro, JSON Schema, Protobuf"
-    - name: Metadata Management
-      children:
-        - category: a
-          name: Amundsen
-          link: https://www.amundsen.io/
-          description: "metadata and data discovery platform built for search and lineage"
 
 - name: Observability & Monitoring
   description: 📊 SLAs & Transparency 🔍 Maintainability
@@ -257,6 +283,10 @@
           description: "network security and observability for containers, VMs, and native host-based workloads"
     - name: Secrets Management
       children:
+        - category: a # Business Source License (BSL) with terms from HashiCorp for Vault version 1.15.0+
+          name: HashiCorp Vault
+          link: https://developer.hashicorp.com/vault
+          description: "securely store and access secrets, tokens, and sensitive data"
         - category: a
           name: Infisical
           link: https://infisical.com/

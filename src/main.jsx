@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useCallback} from "react";
 import ReactDOM from "react-dom/client";
 import yaml from "js-yaml";
 
@@ -21,8 +21,12 @@ function ToolNode({tool}) {
     );
 }
 
-function TreeNode({node, version}) {
+function TreeNode({node, version, allExpanded, onNodeToggle}) {
     const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        setOpen(allExpanded);
+    }, [allExpanded]);
 
     const isToolList = node.category !== undefined;
     const hasChildren = node.children && node.children.length > 0;
@@ -34,8 +38,10 @@ function TreeNode({node, version}) {
     const handleClick = () => {
         if (hasChildren) {
             setOpen(!open);
+            onNodeToggle();
         }
     };
+
     return (
         <li className="ml-4">
             <div
@@ -57,7 +63,8 @@ function TreeNode({node, version}) {
             {open && hasChildren && (
                 <ul className="pl-4 mt-1 space-y-1">
                     {node.children.map((child, idx) => (
-                        <TreeNode key={idx} node={child} version={version}/>
+                        <TreeNode key={idx} node={child} version={version} allExpanded={allExpanded}
+                                  onNodeToggle={onNodeToggle}/>
                     ))}
                 </ul>
             )}
@@ -70,14 +77,14 @@ function FeedbackButton() {
 
     useEffect(() => {
         fetch("/api/feedback")
-            .then(res => res.json())
-            .then(data => setCount(data.count));
+        .then(res => res.json())
+        .then(data => setCount(data.count));
     }, []);
 
     const handleClick = () => {
         fetch("/api/feedback", {method: "POST"})
-            .then(res => res.json())
-            .then(data => setCount(data.count));
+        .then(res => res.json())
+        .then(data => setCount(data.count));
     };
 
     return (
@@ -95,11 +102,12 @@ function FeedbackButton() {
 function App() {
     const [treeData, setTreeData] = useState([]);
     const [activeVersion, setActiveVersion] = useState(CONFIG.defaultVersion);
+    const [allExpanded, setAllExpanded] = useState(false);
 
     useEffect(() => {
         fetch(`${import.meta.env.BASE_URL}data.yaml`)
-            .then((res) => res.text())
-            .then((txt) => setTreeData(yaml.load(txt)));
+        .then((res) => res.text())
+        .then((txt) => setTreeData(yaml.load(txt)));
     }, []);
 
     const versionLabels = {
@@ -108,6 +116,10 @@ function App() {
         c: "GCP",
         d: "Azure",
     };
+
+    const toggleAllExpanded = useCallback(() => {
+        setAllExpanded(!allExpanded);
+    }, [allExpanded]);
 
     return (
         <div>
@@ -126,9 +138,19 @@ function App() {
             {/*        </button>*/}
             {/*    ))}*/}
             {/*</div>*/}
+            <div className="mb-6 flex flex-wrap gap-2 justify-center">
+                <button
+                    className="px-4 py-1.5 rounded-full border transition-colors duration-200 bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
+                    onClick={toggleAllExpanded}
+                >
+                    {allExpanded ? "Collapse All" : "Expand All"}
+                </button>
+            </div>
             <ul className="text-sm space-y-2">
                 {treeData.map((node, idx) => (
-                    <TreeNode key={idx} node={node} version={activeVersion}/>
+                    <TreeNode key={idx} node={node} version={activeVersion} allExpanded={allExpanded}
+                              onNodeToggle={() => {
+                              }}/>
                 ))}
             </ul>
             {/*<FeedbackButton/>*/}
